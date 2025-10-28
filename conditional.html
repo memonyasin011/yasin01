@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if and else</title>
+
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+            font-family: Arial, sans-serif;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>check value even or odd</h1>
+    <input type="number" id="num" placeholder="enter a number">
+    <button onclick="checkNumber()">check</button>
+    <br>
+    <hr>
+    <p id="result"></p>
+
+    <script>
+        function checkNumber() {
+            let number = Number(document.getElementById("num").value);
+
+            if (number === 0) {
+                document.getElementById("result").innerText = "the value is zero";
+            }
+            else if (number % 2 === 0) {
+                document.getElementById("result").innerText = "the value is even";
+            }
+            else {
+                document.getElementById("result").innerText = "the value is odd";
+            }
+        }
+    </script>
+</body>
+
+</html>
