@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch case background colour</title>
+
+    <style>
+        body {
+            transition: background-colour 0.4s ease;
+            text-align: center;
+            margin-top: 100px;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
+        /* give each button its own colour */
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .purple {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>click a button to change background colour</h2>
+    <button class="red" onclick="changeColour('red')">red</button>
+    <button class="blue" onclick="changeColour('blue')">blue</button>
+    <button class="green" onclick="changeColour('green')">green</button>
+    <button class="yellow" onclick="changeColour('yellow')">yellow</button>
+    <button class="purple" onclick="changeColour('purple')">purple</button>
+
+    <script>
+        function changeColour(colourName) {
+            switch(colourName ) {
+                case 'red':
+                    document.body.style.backgroundColor = 'red';
+                    break
+                case 'blue':
+                    document.body.style.backgroundColor = 'blue';
+                    break
+                case 'green':
+                    document.body.style.backgroundColor = 'green';
+                    break
+                case 'yellow':
+                    document.body.style.backgroundColor = 'yellow';
+                    break
+                case 'purple': 
+                    document.body.style.backgroundColor='purple';
+                    break
+                default:
+                    document.body.style.backgroundColor='white';   
+
+
+            }
+        }
+    </script>
+</body>
+
+</html>
