@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rabbit and The Tortoise Story</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+        }
+
+        .story-container {
+            max-width: 900px;
+            margin: 40px auto;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .section {
+            display: none;
+            padding: 40px;
+            text-align: center;
+            color: #fff;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .section img {
+            max-width: 80%;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Unique background colors for each story section */
+        #sec1 {
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+        }
+
+        #sec2 {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+        }
+
+        #sec3 {
+            background: linear-gradient(135deg, #f6d365, #fda085);
+        }
+
+        #sec4 {
+            background: linear-gradient(135deg, #84fab0, #8fd3f4);
+        }
+
+        /* Progress bar */
+        .progress {
+            height: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #ff9966, #ff5e62);
+            height: 10px;
+            transition: width 1s linear;
+        }
+
+        /* Restart button */
+        .btn-restart {
+            background: linear-gradient(90deg, #ff9966, #ff5e62);
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            padding: 10px 25px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            box-shadow: 0 0 15px rgba(255, 94, 98, 0.6);
+            transition: all 0.3s;
+        }
+
+        .btn-restart:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 94, 98, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="story-container">
+
+        <div class="progress">
+            <div id="progressBar" class="progress-bar" style="width: 0%;"></div>
+        </div>
+
+        <div id="sec1" class="section" style="display:block;">
+            <h2>🐇 The Rabbit and The Tortoise 🐢</h2>
+            <img src="https://i.imgur.com/DHEqyi2.jpg" alt="Rabbit and Tortoise at the start">
+            <p>
+                Once upon a time, in a peaceful forest filled with sunshine and laughter, there lived a rabbit who was
+                very proud of his speed.
+                He would often boast, “I am the fastest animal in the forest!” and run around just to show off.
+                The other animals admired his energy but were tired of his arrogance.
+                Among them lived a wise and humble tortoise who moved slowly but never gave up.
+                The rabbit laughed at him, calling him “Slowpoke.” The tortoise just smiled and said, “Let’s see about
+                that someday.”
+            </p>
+        </div>
+
+        <div id="sec2" class="section">
+            <img src="https://i.imgur.com/4kNzkUf.jpg" alt="Rabbit laughing at tortoise">
+            <p>
+                One sunny morning, the tortoise challenged the rabbit to a race.
+                The rabbit laughed loudly, “You must be joking!” he said.
+                But the tortoise calmly replied, “We shall see who wins.”
+                The forest animals gathered to watch the strange competition.
+                The fox stood as the referee and shouted, “On your marks, get set, go!”
+                The rabbit dashed off like lightning, while the tortoise began to move slowly and steadily, one step at
+                a time.
+            </p>
+        </div>
+
+        <div id="sec3" class="section">
+            <img src="https://i.imgur.com/gZzM2Yh.jpg" alt="Rabbit sleeping under tree">
+            <p>
+                Confident of victory, the rabbit decided to rest under a shady tree.
+                “I’ll nap for a while and still beat that slow tortoise,” he thought proudly.
+                The gentle breeze made him sleepy, and soon he was snoring softly.
+                Meanwhile, the tortoise continued his slow journey — steady, patient, never stopping.
+                The sun began to sink low in the sky as the tortoise quietly passed the sleeping rabbit, step by step,
+                toward the finish line.
+            </p>
+        </div>
+
+        <div id="sec4" class="section">
+            <img src="https://i.imgur.com/f6VE8Cn.jpg" alt="Tortoise wins the race">
+            <p>
+                When the rabbit woke up, he saw the tortoise near the finish line!
+                Terrified, he ran as fast as he could, but it was too late.
+                The tortoise crossed the line just as the rabbit arrived, panting and ashamed.
+                The forest erupted in cheers for the tortoise’s victory.
+                The rabbit hung his head, realizing that his arrogance had cost him dearly.
+                The tortoise smiled kindly and said, “Slow and steady wins the race.”
+                From that day, every creature remembered the lesson of patience and perseverance.
+            </p>
+            <button class="btn-restart" onclick="restartStory()">🔁 Restart Story</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>✨ The Rabbit and The Tortoise – A Colorful Tale of Patience and Pride 🏁 | Auto-Play Mode 🎬</p>
+    </footer>
+
+    <audio id="bgMusic" loop autoplay>
+        <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_62d38b5d16.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const total = 4;
+        let current = 1;
+        const intervalTime = 12000; // 12 seconds per section
+        let autoplay;
+
+        function showSection(num) {
+            for (let i = 1; i <= total; i++) {
+                document.getElementById('sec' + i).style.display = 'none';
+            }
+            document.getElementById('sec' + num).style.display = 'block';
+            document.getElementById('progressBar').style.width = ((num - 1) / (total - 1)) * 100 + "%";
+        }
+
+        function startAutoPlay() {
+            autoplay = setInterval(() => {
+                current++;
+                if (current > total) {
+                    clearInterval(autoplay);
+                    current = total;
+                }
+                showSection(current);
+            }, intervalTime);
+        }
+
+        function restartStory() {
+            clearInterval(autoplay);
+            current = 1;
+            showSection(current);
+            startAutoPlay();
+        }
+
+        window.onload = () => {
+            showSection(1);
+            startAutoPlay();
+            document.getElementById('bgMusic').volume = 0.4;
+        };
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive or Negative Checker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298, #a1c4fd);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            text-align: center;
+            width: 350px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+        }
+
+        h2 {
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        input[type="number"] {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            padding: 10px;
+            width: 100%;
+            font-size: 1.1em;
+            transition: all 0.3s;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 10px #a1c4fd;
+        }
+
+        .btn-checker {
+            background: linear-gradient(90deg, #ff512f, #dd2476);
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 0 15px rgba(221, 36, 118, 0.6);
+        }
+
+        .btn-checker:hover {
+            background: linear-gradient(90deg, #dd2476, #ff512f);
+            box-shadow: 0 0 25px rgba(255, 81, 47, 0.8);
+            transform: scale(1.05);
+        }
+
+        #result {
+            margin-top: 25px;
+            font-size: 1.3em;
+            font-weight: 600;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+
+        #result.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>🔢 Number Checker</h2>
+        <input type="number" id="numberInput" placeholder="Enter a number">
+        <button class="btn-checker" onclick="checkNumber()">Check</button>
+        <div id="result"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function checkNumber() {
+            const num = document.getElementById('numberInput').value;
+            const resultDiv = document.getElementById('result');
+
+            if (num === '') {
+                resultDiv.innerHTML = '⚠️ Please enter a number!';
+                resultDiv.style.color = '#FFD700';
+            } else if (num > 0) {
+                resultDiv.innerHTML = '✅ The number is <span style="color:#00FF88;">Positive</span>!';
+            } else if (num < 0) {
+                resultDiv.innerHTML = '❌ The number is <span style="color:#FF6B6B;">Negative</span>!';
+            } else {
+                resultDiv.innerHTML = '🟰 The number is <span style="color:#FFD700;">Zero</span>!';
+            }
+
+            resultDiv.classList.add('show');
+        }
+    </script>
+
+</body>
+
+</html>
