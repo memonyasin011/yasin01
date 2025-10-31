@@ -42,3 +42,16 @@ let c=(number % 2 === 0) ? "even" : "odd";
 console.log(c)
 console.log("the above output of fifth program")
 
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+
+let weight = 89;
+if (weight >50) {
+    console.log("you are unhealthy")
+}
+    else{
+    console.log("you are healthy")
+    }
+    console.log("the above output of sixth program")
+
+   
